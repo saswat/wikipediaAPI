@@ -1,7 +1,12 @@
+let userInput;
+
 function setup() {
+  noCanvas();
+  userInput = select('#userinput');
+  userInput.changed(goWiki);
 
-}
-
-function draw() {
-  
+  function goWiki() {
+    const term = userInput.value();
+    console.log(term);
+  }
 }
